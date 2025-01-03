@@ -13,7 +13,7 @@ client, addr = server.accept()
 while True:
     data = client.recv(max_size)
     print(data)
-    if data == "exit":
+    if data == b"exit":
         break
     else:
         continue
