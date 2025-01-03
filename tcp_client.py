@@ -8,8 +8,8 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(address)
 kek = 0
 while True:
-    client.sendall(bin(str(input("-->"))))
-    data = client.recv(max_size)
+    sms = input("-->")
+    client.sendall(bytes(sms, encoding="utf-8"))
     kek += 1
     if kek == 5:
         break
