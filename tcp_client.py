@@ -9,10 +9,9 @@ client.connect(address)
 kek = 0
 while True:
     sms = input("-->")
-    client.sendall(bytes(sms, encoding="utf-8"))
-    kek += 1
-    if kek == 5:
+    if sms == "exit":
         break
     else:
-        continue
+        client.sendall(bytes(sms, encoding="utf-8"))
+
 client.close()

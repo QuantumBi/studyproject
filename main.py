@@ -9,15 +9,15 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(server_addres)
 server.listen(5)
 client, addr = server.accept()
-kek = 0
+
 while True:
     data = client.recv(max_size)
-    print(f"At {client} said {data}")
-    kek += 1
-    if kek == 10:
+    print(data)
+    if data == "exit":
         break
     else:
         continue
+
 
 client.close()
 server.close()
