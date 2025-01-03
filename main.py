@@ -8,11 +8,16 @@ print('Waiting for a client to call.\n')
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(server_addres)
 server.listen(5)
-
 client, addr = server.accept()
-data = client.recv(max_size)
+kek = 0
+while True:
+    data = client.recv(max_size)
+    print(f"At {client} said {data}")
+    kek += 1
+    if kek == 10:
+        break
+    else:
+        continue
 
-print(f"At {client} said {data}")
-client.sendall(b'Are you talking to me?')
 client.close()
 server.close()
