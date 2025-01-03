@@ -8,7 +8,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(address)
 
 while True:
-    sms = input("-->")
+    sms = input("--> ")
     if sms == "exit":
         break
     else:
