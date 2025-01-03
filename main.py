@@ -1,6 +1,6 @@
 import socket
 
-server_addres = ('localhost', 6789)
+server_addres = ('192.168.0.102', 6666)
 max_size = 1000
 
 print('Starting the server\n')

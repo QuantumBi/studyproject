@@ -1,6 +1,6 @@
 import socket
 
-address = ("192.168.0.102", 6789)
+address = ("192.168.0.102", 6666)
 max_size = 1000
 
 print("starting the cleint\n")
